@@ -1,4 +1,4 @@
-@tailwind base;
+/* @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
@@ -31,3 +31,123 @@ body {
     text-wrap: balance;
   }
 }
+
+.memeSec {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.memeBox {
+  width: 19%;
+  background: #fff;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.memeBox img {
+  width: 100%;
+}
+
+.memeBox a {
+  background: #f00;
+  color: #fff;
+  font-size: 20px;
+  padding: 10px;
+  display: inline-block;
+  margin-top: 10px;
+}
+
+.memeDetailBox input {
+  border: #000 1px solid;
+}
+
+.curMeme {
+  border: #000 1px solid;
+  width: 30%;
+}
+
+.curMeme img {
+  width: 100%;
+} */
+/* Tailwind CSS imports and custom variables */
+/* Tailwind CSS imports and custom variables */
+
+/* Root variables for color scheme */
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+/* Dark mode */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+/* Body styles */
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+
+/* Styles for meme section */
+.memeSec {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+/* Meme box styles */
+.memeBox {
+  width: calc(20% - 20px); /* Adjust according to your preference */
+  max-width: 250px; /* Limit maximum width if necessary */
+  background: #fff;
+  padding: 20px;
+  margin-bottom: 20px;
+  overflow: hidden; /* Hide content overflow */
+  transition: all 0.3s ease; /* Example of transition */
+}
+
+.memeBox:hover {
+  transform: scale(1.05); /* Example of hover effect */
+}
+
+.memeBox img {
+  width: 100%;
+  height: auto; /* Maintain aspect ratio */
+}
+
+.memeBox a {
+  background: #f00;
+  color: #fff;
+  font-size: 20px;
+  padding: 10px;
+  display: inline-block;
+  margin-top: 10px;
+}
+
+/* Input styles */
+.memeDetailBox input {
+  border: #000 1px solid;
+}
+
+/* Current meme styles */
+.curMeme {
+  border: #000 1px solid;
+  width: 30%;
+}
+
+.curMeme img {
+  width: 100%;
+}
+
